@@ -29,6 +29,6 @@ El pipeline implementa la arquitectura Medallion de tres capas:
 | ⚪ Silver | Limpieza, validación de calidad, tipado de columnas y transformación a formato Parquet. |
 | 🟡 Gold | Datos analíticos enriquecidos con información de precios del petróleo y métricas agregadas. |
 
-## Estructura del repositorio
+
 
 
