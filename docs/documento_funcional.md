@@ -28,13 +28,13 @@ La arquitectura implementada sigue el modelo Medallion, compuesto por tres capas
 - Silver: datos limpios y transformados en formato Parquet.
 - Gold: datos analíticos enriquecidos con información proveniente de la API REST.
 
-![Storage](Storage.png)
+![Storage](../Storage.png)
 
-![Bronze](bronce.png)
+![Bronze](../bronce.png)
 
-![Silver](silver.png)
+![Silver](../silver.png)
 
-![gold](gold.png)
+![gold](../gold.png)
  
 Azure Data Factory se utilizó para la ingesta y automatización, mientras que Azure Databricks permitió realizar las transformaciones y validaciones mediante PySpark.
 
@@ -57,16 +57,16 @@ Gold	Datos analíticos en Delta
 Azure Data Factory fue utilizado para automatizar la ingesta de datos desde la capa Bronze hacia Silver mediante actividades Copy Data.
 Linked Service
  
-![Linked Service](linked_service.png)
+![Linked Service](../linked_service.png)
 
 Trigger Programado
  
-![Trigger](trigger_programado.png)
+![Trigger](../trigger_programado.png)
 
 6. Implementación en Databricks
 Cluster Databricks
 
- ![cluster Databricks](databricks.png)
+ ![cluster Databricks](../databricks.png)
 
 Lectura parquet
 df = spark.read.parquet(
@@ -78,7 +78,7 @@ df = df.withColumn(
     col("anio").cast("int")
 )
 
-![conversion](conversion.png)
+![conversion](../conversion.png)
  
 Azure Databricks permitió realizar tareas ETL utilizando PySpark, 
 
@@ -103,16 +103,16 @@ Como resultado del procesamiento se generaron datasets analíticos enriquecidos 
 Se obtuvieron métricas como:
 - Producción total por país,
 
-![Producción](produccion.png)
+![Producción](../produccion.png)
 
  
 .- Evolución temporal de producción,
  
-![Evolución](evolucion.png)
+![Evolución](../evolucion.png)
 
 - Valor estimado de producción petrolera.
 
-  ![Valor Estimado](valor_estimado.png)
+  ![Valor Estimado](../valor_estimado.png)
  
 9. Automatización
 
